@@ -33,6 +33,7 @@ const showWinner = (winner) =>{
     msg.innerText = `Congratulations our Winner is player${winner}!!!`;
     msgContainer.style.display = "flex";
     disableBoxes();
+    resetBtn.style.display = "none";
 }
 
 const checkWinner = () => {
@@ -70,7 +71,9 @@ const reset = () =>{
     })
 
     msgContainer.style.display = "none";
+    resetBtn.style.display = "";
 }
 
 resetBtn.addEventListener("click", reset)
+
 newGameBtn.addEventListener("click", reset)
